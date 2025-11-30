@@ -27,8 +27,11 @@ def print_name_shuffle_letters(first_name, last_name):
     last_name_shuffled = "".join(rnd.sample(last_name, len(last_name)))
     print(f"{first_name_shuffled} {last_name_shuffled}")
 
+def print_name_colored(first_name, last_name):
+    print(f"\033[91m{first_name}\03 \033[94m{last_name}\033[0m")
 
-print_styles = [print_name, print_name_reversed, print_name_uppercase,print_name_shuffle_letters]
+
+print_styles = [print_name, print_name_reversed, print_name_uppercase,print_name_shuffle_letters,print_name_colored]
 
 def print_name_random_style(first_name, last_name):
     rnd.choice(print_styles)(first_name, last_name)
