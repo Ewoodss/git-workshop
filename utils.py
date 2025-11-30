@@ -7,6 +7,9 @@ def load_people() -> list[dict]:
         names = json.load(f)
     return names["people"]
 
+def randomize_list(list: list) -> list:
+    rnd.shuffle(list)
+    return list
 
 def print_name(first_name, last_name):
     print(f"{first_name} {last_name}")
