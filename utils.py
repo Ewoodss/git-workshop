@@ -1,3 +1,6 @@
+from random import Random
+rnd = Random()
+
 def load_people() -> list[dict]:
     import json
     with open("people.json", "r") as f:
@@ -7,3 +10,15 @@ def load_people() -> list[dict]:
 
 def print_name(first_name, last_name):
     print(f"{first_name} {last_name}")
+
+def print_name_reversed(first_name, last_name):
+    first_name_rev = first_name[::-1]
+    last_name_rev = last_name[::-1]
+    print(f"{last_name_rev} {first_name_rev}")
+
+
+
+print_styles = [print_name, print_name_reversed]
+
+def print_name_random_style(first_name, last_name):
+    rnd.choice(print_styles)(first_name, last_name)
