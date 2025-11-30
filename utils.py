@@ -30,8 +30,18 @@ def print_name_shuffle_letters(first_name, last_name):
 def print_name_colored(first_name, last_name):
     print(f"\033[91m{first_name}\03 \033[94m{last_name}\033[0m")
 
+def get_random_color():
+    return rnd.choice(["\033[91m", "\033[92m", "\033[93m", "\033[94m", "\033[95m", "\033[96m"])
 
-print_styles = [print_name, print_name_reversed, print_name_uppercase,print_name_shuffle_letters,print_name_colored]
+def print_name_rnd_color(first_name, last_name):
+    first_name_color = get_random_color()
+    last_name_color = get_random_color()
+    print(f"{first_name_color}{first_name}\033[0m {last_name_color}{last_name}\033[0m")  # Reset color after print
+    
+    
+
+
+print_styles = [print_name, print_name_reversed, print_name_uppercase,print_name_shuffle_letters,print_name_colored,print_name_rnd_color]
 
 def print_name_random_style(first_name, last_name):
     rnd.choice(print_styles)(first_name, last_name)
