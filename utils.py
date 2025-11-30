@@ -22,8 +22,13 @@ def print_name_reversed(first_name, last_name):
 def print_name_uppercase(first_name, last_name):
     print(f"{first_name.upper()} {last_name.upper()}")
 
+def print_name_shuffle_letters(first_name, last_name):
+    first_name_shuffled = "".join(rnd.sample(first_name, len(first_name)))
+    last_name_shuffled = "".join(rnd.sample(last_name, len(last_name)))
+    print(f"{first_name_shuffled} {last_name_shuffled}")
 
-print_styles = [print_name, print_name_reversed, print_name_uppercase]
+
+print_styles = [print_name, print_name_reversed, print_name_uppercase,print_name_shuffle_letters]
 
 def print_name_random_style(first_name, last_name):
     rnd.choice(print_styles)(first_name, last_name)
