@@ -19,9 +19,11 @@ def print_name_reversed(first_name, last_name):
     last_name_rev = last_name[::-1]
     print(f"{last_name_rev} {first_name_rev}")
 
+def print_name_uppercase(first_name, last_name):
+    print(f"{first_name.upper()} {last_name.upper()}")
 
 
-print_styles = [print_name, print_name_reversed]
+print_styles = [print_name, print_name_reversed, print_name_uppercase]
 
 def print_name_random_style(first_name, last_name):
     rnd.choice(print_styles)(first_name, last_name)
