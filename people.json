@@ -1,0 +1,16 @@
+{
+    "people": [
+        {
+            "first_name": "Ewout",
+            "last_name": "Baars"
+        },
+        {
+            "first_name": "Stijn",
+            "last_name": "van Houwelingen"
+        },
+        {
+            "first_name": "John",
+            "last_name": "Doe"
+        }
+    ]
+}
