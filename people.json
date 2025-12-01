@@ -19,6 +19,10 @@
         {
             "first_name": "ada",
             "last_name": "lovelace"
+        },
+        {
+            "first_name": "henk",
+            "last_name": "de hopper"
         }
     ]
 }
